@@ -2,6 +2,7 @@
 #define GAME_H
 
 #include "Board.h"
+#include "Snake.h"
 #include "kbhit.h"
 #include "Config.h"
 #include <vector>
@@ -9,7 +10,7 @@
 class Game {
     private:
         Board m_board;
-
+        Snake m_snake;
         std::list<int> m_blankIndexes;
         int m_food_index;
         Board &getBoard() {
@@ -22,7 +23,7 @@ class Game {
         bool hasFood(int index);
 
     public:
-        Game(Board &board);
+        Game(Board &board, Snake &snake);
         void draw();
         void nextStep();
         bool isLive() {
