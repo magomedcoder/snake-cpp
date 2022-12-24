@@ -11,6 +11,7 @@ void Snake::nextStep() {
 
 void Snake::addOneCube() {
     int nextX, nextY;
+    getXYFromIndex(m_cubes.back(), nextX, nextY);
     nextX = m_board.getNextX(nextX, m_direction);
     nextY = m_board.getNextY(nextY, m_direction);
     m_cubes.push_back(getIndexFromXY(nextX, nextY));

@@ -5,4 +5,5 @@
 #define C_DEFAULT "\x1b[0m"
 #define SNAKE_BODY_SYM C_DARK_GREEN "1" C_DEFAULT
 #define FOOD_SYM C_DARK_RED "0" C_DEFAULT
+#define EMPTY_SYM ""
 #endif
